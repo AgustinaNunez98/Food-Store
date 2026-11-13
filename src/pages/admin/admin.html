@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador</title>
+    <link rel="stylesheet" href="../../../css/estyles.css">
+    <link rel="stylesheet" href="./admin.css">
+</head>
+<body>
+    <header>
+        <h2>Panel de Administración</h2>
+        <nav>
+            <a href="../client/home/home.html">Volver a la tienda</a>
+        </nav>
+        <button id="cerrar-sesion">Cerrar sesión</button>
+    </header>
+
+    <main>
+        <section>
+            <h3>Inventario</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Imagen</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Categoría</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Stock</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">01</th>
+                        <td><img src="/assets/gaseosa.jpeg" alt="Lata Coca-cola"></td>
+                        <td>Lata Coca-cola</td>
+                        <td>Bebidas gasificadas</td>
+                        <td>$3.500</td>
+                        <td>3</td>
+                        <td>
+                            <a href="editar">Editar</a>
+                            <a href="eliminar">Eliminar</a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">02</th>
+                        <td><img src="/assets/Smash burger.jpeg" alt="Hamburguesa simple"></td>
+                        <td>Hamburguesa simple</td>
+                        <td>Comida rápida</td>
+                        <td>$7.900</td>
+                        <td>5</td>
+                        <td>
+                            <a href="editar">Editar</a>
+                            <a href="eliminar">Eliminar</a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">03</th>
+                        <td><img src="/assets/Papas Cheddar.jpeg" alt="Hamburguesa doble con cheddar"></td>
+                        <td>Hamburguesa doble con cheddar</td>
+                        <td>Comida rápida</td>
+                        <td>$11.500</td>
+                        <td>2</td>
+                        <td>
+                            <a href="editar">Editar</a>
+                            <a href="eliminar">Eliminar</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    <br><br><br>
+    <section id="agregar">
+        <h3>Agregar producto nuevo</h3>
+        <form action="#">
+            <div class="admin-field">
+                <label for="nombre">Nombre del producto</label>
+                <input type="text" id="nombre" name="nombre">
+            </div>
+            <div class="admin-field">
+                <label for="precio">Precio del producto</label>
+                <input type="number" id="precio" name="precio">
+            </div>
+            <div class="admin-field">
+                <label for="categoria">Categoría del producto</label>
+                <input type="text" id="categoria" name="categoria">
+            </div>
+            <button type="button">Agregar</button>
+        </form>
+    </section>
+    </main>
+    <script type= "module" src= "/src/main.ts"></script>
+    <script type = "module" src= "/src/utils/logout.ts"></script>
+</body>
+</html>

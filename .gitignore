@@ -1,0 +1,28 @@
+# Frontend
+node_modules/
+dist/
+
+# Gradle y Java
+.gradle/
+build/
+out/
+*.class
+
+# IntelliJ y macOS
+.idea/
+*.iml
+.DS_Store
+
+# Base de datos H2 local
+*.mv.db
+*.trace.db
+
+# Configuración local
+.env
+.env.*
+!.env.example
+
+# Entregas comprimidas
+*.zip
+
+/Consignas/

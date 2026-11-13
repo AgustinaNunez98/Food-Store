@@ -1,0 +1,153 @@
+body {
+    background: var(--color-fondo);
+}
+
+body > header {
+    max-width: 1180px;
+}
+
+body > header h2 {
+    margin: 0 auto 0 0;
+    color: var(--color-primario);
+}
+
+body > main {
+    max-width: 1180px;
+    text-align: left;
+}
+
+main section {
+    margin-bottom: 38px;
+}
+
+main h3 {
+    margin: 0 0 18px;
+    color: var(--color-texto);
+    font-size: 1.35rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border: 1px solid var(--color-borde);
+    border-radius: 12px;
+    background: var(--color-blanco);
+    box-shadow: var(--sombra);
+}
+
+th,
+td {
+    padding: 14px 12px;
+    border-bottom: 1px solid #ffedd5;
+    text-align: left;
+    vertical-align: middle;
+}
+
+thead {
+    background: var(--color-texto);
+    color: var(--color-blanco);
+}
+
+th {
+    font-size: 0.85rem;
+}
+
+tbody tr:last-child td,
+tbody tr:last-child th {
+    border-bottom: 0;
+}
+
+tbody tr:hover {
+    background: #fffaf5;
+}
+
+table img {
+    display: block;
+    width: 72px;
+    height: 58px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+td a {
+    margin-right: 8px;
+    color: var(--color-primario);
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+td a:hover {
+    color: var(--color-focus);
+    text-decoration: underline;
+}
+
+#agregar {
+    padding: 28px;
+    border: 1px solid var(--color-borde);
+    border-radius: 14px;
+    background: linear-gradient(135deg, #fffaf5, #fff7ed);
+}
+
+#agregar form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) auto;
+    align-items: end;
+    gap: 18px;
+}
+
+.admin-field {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#agregar label {
+    margin-bottom: 7px;
+    color: var(--color-texto);
+    font-size: 0.85rem;
+}
+
+#agregar input {
+    margin: 0;
+    min-width: 0;
+    border-radius: 10px;
+    background: var(--color-blanco);
+}
+
+#agregar button {
+    width: auto;
+    margin: 0;
+    min-height: 47px;
+    padding: 13px 28px;
+    white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 16px 10px;
+    }
+
+    body > main {
+        padding: 22px 14px;
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 760px;
+    }
+
+    #agregar form {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-field {
+        width: 100%;
+    }
+
+    #agregar button {
+        width: 100%;
+    }
+}

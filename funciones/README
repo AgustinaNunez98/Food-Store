@@ -1,0 +1,20 @@
+//Sistema de Gestión de Productos y Categorías
+
+//Descripción del proyecto
+Aplicación de consola desarrollada en Java para la evaluación parcial de Programación III.
+El sistema permite realizar operaciones de alta, modificación, baja lógica y consulta de categorías y productos
+mediante repositorios utilizando Java Persistence API (JPA).
+Además, incorpora consultas JPQL para obtener los productos activos asociados a una categoría.
+
+El proyecto utiliza Hibernate como proveedor de persistencia, H2 como base de datos y Gradle para la gestión de dependencias.
+
+Instrucciones de ejecución
+Abrir el proyecto desde su carpeta raíz, donde se encuentra el archivo build.gradle.
+Verificar que esté instalado y configurado Java 21.
+Sincronizar el proyecto con Gradle para descargar las dependencias necesarias.
+Ejecutar la clase principal com.tp.jpa.Main, ubicada en src/main/java/com/tp/jpa/Main.java.
+Una vez iniciada la aplicación, utilizar el menú de consola para gestionar categorías, productos y consultar reportes.
+
+La base de datos H2 se configura automáticamente mediante el archivo persistence.xml y almacena los datos en ./data/jpa_db, permitiendo conservarlos entre ejecuciones.
+
+No es necesario instalar ni configurar un servidor de base de datos externo.

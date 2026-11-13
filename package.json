@@ -1,0 +1,14 @@
+{
+  "name": "food-store-integrador",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.2",
+    "typescript": "^5.0.0",
+    "vite": "^6.0.0"
+  }
+}
