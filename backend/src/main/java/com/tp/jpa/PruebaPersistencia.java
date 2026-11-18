@@ -11,10 +11,14 @@ import com.tp.jpa.util.JPAUtil;
 import jakarta.persistence.EntityManager;
 
 import java.time.LocalDate;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 public class PruebaPersistencia {
+    private static final Logger HIBERNATE_LOGGER = Logger.getLogger("org.hibernate");
     public static void main(String[] args) {
+        HIBERNATE_LOGGER.setLevel(Level.SEVERE);
         EntityManager em = JPAUtil.getEntityManager();
 
         try {
@@ -184,7 +188,11 @@ public class PruebaPersistencia {
             System.out.println("Precio actualizado del producto: " + p3.getNombre() + " - Nuevo precio: " + p3.getPrecio());
 
             Usuario usuarioEncontradoId = em.find(Usuario.class, u1.getId());
-            System.out.println("Usuario encontrado por ID: " + usuarioEncontradoId);
+            if (usuarioEncontradoId != null) {
+                System.out.println("Usuario encontrado por ID: " + usuarioEncontradoId.getId());
+            } else {
+                System.out.println("Usuario no encontrado por ID.");
+            }
             Usuario usuarioEncontradoMail = em.createQuery("SELECT u FROM Usuario u WHERE u.mail = :mail", Usuario.class)
                     .setParameter("mail", u1.getMail())
                     .getSingleResult();
@@ -193,9 +201,10 @@ public class PruebaPersistencia {
 
             Producto productoEliminado = em.find(Producto.class, p10.getId());
             em.remove(productoEliminado);
-            System.out.println("Producto eliminado: " + productoEliminado);
+            System.out.println("Producto eliminado: " + productoEliminado.getNombre() + " (ID: " + productoEliminado.getId() + ")");
 
             em.getTransaction().commit();
+
         }
         catch (RuntimeException e) {
             if (em.getTransaction().isActive()){

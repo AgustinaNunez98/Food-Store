@@ -10,6 +10,11 @@ y compilar el proyecto.
 - Validación de precio y stock de los productos.
 - Consulta JPQL de productos activos por categoría.
 - Persistencia de datos en H2 entre ejecuciones.
+- Gestión de usuarios y búsqueda por mail.
+- Alta de pedidos con detalles, cálculo del total y descuento de stock en una transacción.
+- Cambio de estado y baja lógica de pedidos.
+- Listados de pedidos activos, por usuario y por estado.
+- Reporte del total facturado de pedidos terminados activos.
 
 ## Requisitos
 
@@ -32,7 +37,8 @@ En Windows, usá `.\gradlew.bat compileJava`. La tarea `compileJava` verifica qu
 2. Vinculá `backend/build.gradle` como proyecto Gradle y seleccioná un **JDK 21** en **Gradle JVM**.
 3. Abrí `backend/src/main/java/com/tp/jpa/Main.java` y ejecutá `com.tp.jpa.Main`.
 4. En la configuración de ejecución de `Main`, seleccioná **`backend/`** como **Working directory**.
-5. Usá la consola para gestionar categorías y productos, o consultar el reporte de productos por categoría.
+5. Usá la consola para gestionar categorías, productos, usuarios y pedidos, y consultar los reportes de productos 
+por categoría, pedidos por usuario o estado y total facturado.
 
 ## Base de datos
 
